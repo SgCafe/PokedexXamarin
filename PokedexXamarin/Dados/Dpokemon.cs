@@ -3,6 +3,7 @@ using PokedexXamarin.Conexao;
 using PokedexXamarin.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +25,20 @@ namespace PokedexXamarin.Dados
                 Tipos = parametros.Tipos,
                 IdPokemon = parametros.IdPokemon,
             });
+        }
+
+        public async Task<List<Pokemon>> MostrarPokemon()
+        {
+            return (await Cconexao.firebase.Child("Pokemon").OnceAsync<Pokemon>()).Select(item => new Pokemon
+            {
+                IdPokemon = item.Key,
+                Nome = item.Object.Nome,
+                Tipos = item.Object.Tipos,
+                Icone = item.Object.Icone,
+                NumOrdem = item.Object.NumOrdem,
+                CorFundo = item.Object.CorFundo,
+                CorTipo = item.Object.CorTipo,
+            }).ToList();
         }
     }
 }
