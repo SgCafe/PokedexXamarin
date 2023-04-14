@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokedexXamarin.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,8 @@ namespace PokedexXamarin
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            
+            MainPage = new RegistrarPokemon();
         }
 
         protected override void OnStart()

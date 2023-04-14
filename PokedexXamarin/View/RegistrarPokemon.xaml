@@ -1,12 +1,169 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PokedexXamarin.View.RegistrarPokemon">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+<ContentPage
+    x:Class="PokedexXamarin.View.RegistrarPokemon"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid BackgroundColor="#1d1d1d" RowDefinitions="80,*">
+        <StackLayout
+            Margin="10"
+            Orientation="Horizontal"
+            VerticalOptions="Center">
+            <Image HeightRequest="30" Source="https://i.ibb.co/kBMMn5m/image-removebg-preview-4.png" />
+            <Image
+                HeightRequest="50"
+                HorizontalOptions="CenterAndExpand"
+                Source="https://i.ibb.co/YN5c6yV/pokemon-png-logo.webp" />
+            <Image HeightRequest="50" Source="https://i.ibb.co/TwSLz3f/poke.png" />
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout Grid.Row="1" Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Nome:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Entry
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Placeholder="Insira o nome do pokemon"
+                    PlaceholderColor="White"
+                    TextColor="#ffeb72"
+                    TextTransform="Lowercase" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Cor de fundo:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Entry
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Placeholder="Insira uma cor de fundo"
+                    PlaceholderColor="White"
+                    TextColor="#ffeb72"
+                    TextTransform="Lowercase" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Numero do Pokemon:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Entry
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Placeholder="Insira o numero"
+                    PlaceholderColor="White"
+                    TextColor="#ffeb72"
+                    TextTransform="Lowercase" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Imagem do Pokemon"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Entry
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Placeholder="Insira a imagem"
+                    PlaceholderColor="White"
+                    TextColor="#ffeb72"
+                    TextTransform="Lowercase" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Tipo do Pokemon"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Entry
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Placeholder="Insira o tipo"
+                    PlaceholderColor="White"
+                    TextColor="#ffeb72"
+                    TextTransform="Lowercase" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Cor do tipo:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Entry
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Placeholder="Insira uma cor do tipo"
+                    PlaceholderColor="White"
+                    TextColor="#ffeb72"
+                    TextTransform="Lowercase" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Image HeightRequest="15" Source="https://i.ibb.co/wRJT8hr/image-removebg-preview-5.png" />
+                <Label
+                    FontAttributes="Italic"
+                    FontSize="20"
+                    Text="Vizualizar previa"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </StackLayout>
+
+            <Grid RowDefinitions="80,*">
+                <Frame
+                    Grid.Row="1"
+                    Margin="0,-38,0,0"
+                    BackgroundColor="#D8F3E9"
+                    CornerRadius="15"
+                    HorizontalOptions="Center"
+                    WidthRequest="250">
+                    <StackLayout Margin="0,90,0,0">
+                        <Label Text="#001" />
+                        <Label
+                            Margin="0,0,0,10"
+                            CharacterSpacing="1"
+                            FontSize="20"
+                            Text="Nome: " />
+                        <Button
+                            BackgroundColor="#29CE69"
+                            CornerRadius="30"
+                            HeightRequest="40"
+                            HorizontalOptions="Start"
+                            Text="Folha"
+                            TextTransform="None" />
+
+                    </StackLayout>
+                </Frame>
+                <Image
+                    Grid.RowSpan="2"
+                    HeightRequest="180"
+                    Source="https://i.ibb.co/722k27s/pokemon-png-from-pngfre-17.png"
+                    VerticalOptions="StartAndExpand" />
+            </Grid>
+
+            <Frame
+                Margin="0,10,0,0"
+                Padding="0"
+                CornerRadius="15"
+                HasShadow="False"
+                HorizontalOptions="Center">
+                <Button
+                    BackgroundColor="#FFE15D"
+                    BorderColor="#FFF288"
+                    BorderWidth="6"
+                    CornerRadius="15"
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    Text="+"
+                    VerticalOptions="Center"
+                    WidthRequest="60" />
+
+            </Frame>
+
+        </StackLayout>
+    </Grid>
 </ContentPage>
