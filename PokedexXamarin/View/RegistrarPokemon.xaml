@@ -28,6 +28,7 @@
                     HorizontalOptions="StartAndExpand"
                     Placeholder="Insira o nome do pokemon"
                     PlaceholderColor="White"
+                    Text="{Binding TxtNome}"
                     TextColor="#ffeb72"
                     TextTransform="Lowercase" />
             </StackLayout>
@@ -42,6 +43,7 @@
                     HorizontalOptions="StartAndExpand"
                     Placeholder="Insira uma cor de fundo"
                     PlaceholderColor="White"
+                    Text="{Binding TxtCorFundo}"
                     TextColor="#ffeb72"
                     TextTransform="Lowercase" />
             </StackLayout>
@@ -56,6 +58,7 @@
                     HorizontalOptions="StartAndExpand"
                     Placeholder="Insira o numero"
                     PlaceholderColor="White"
+                    Text="{Binding TxtNumOrdem}"
                     TextColor="#ffeb72"
                     TextTransform="Lowercase" />
             </StackLayout>
@@ -66,10 +69,11 @@
                     TextColor="White"
                     VerticalOptions="Center" />
                 <Entry
-                    FontSize="16"
+                    FontSize="6"
                     HorizontalOptions="StartAndExpand"
                     Placeholder="Insira a imagem"
                     PlaceholderColor="White"
+                    Text="{Binding TxtIcone}"
                     TextColor="#ffeb72"
                     TextTransform="Lowercase" />
             </StackLayout>
@@ -84,6 +88,7 @@
                     HorizontalOptions="StartAndExpand"
                     Placeholder="Insira o tipo"
                     PlaceholderColor="White"
+                    Text="{Binding TxtTipos}"
                     TextColor="#ffeb72"
                     TextTransform="Lowercase" />
             </StackLayout>
@@ -98,6 +103,7 @@
                     HorizontalOptions="StartAndExpand"
                     Placeholder="Insira uma cor do tipo"
                     PlaceholderColor="White"
+                    Text="{Binding TxtCorTipos}"
                     TextColor="#ffeb72"
                     TextTransform="Lowercase" />
             </StackLayout>
@@ -115,23 +121,23 @@
                 <Frame
                     Grid.Row="1"
                     Margin="0,-38,0,0"
-                    BackgroundColor="#D8F3E9"
+                    BackgroundColor="{Binding TxtCorFundo}"
                     CornerRadius="15"
                     HorizontalOptions="Center"
                     WidthRequest="250">
                     <StackLayout Margin="0,90,0,0">
-                        <Label Text="#001" />
+                        <Label Text="{Binding TxtNumOrdem}" />
                         <Label
                             Margin="0,0,0,10"
                             CharacterSpacing="1"
                             FontSize="20"
-                            Text="Nome: " />
+                            Text="{Binding TxtNome}" />
                         <Button
-                            BackgroundColor="#29CE69"
+                            BackgroundColor="{Binding TxtCorTipos}"
                             CornerRadius="30"
                             HeightRequest="40"
                             HorizontalOptions="Start"
-                            Text="Folha"
+                            Text="{Binding TxtTipos}"
                             TextTransform="None" />
 
                     </StackLayout>
@@ -139,7 +145,7 @@
                 <Image
                     Grid.RowSpan="2"
                     HeightRequest="180"
-                    Source="https://i.ibb.co/722k27s/pokemon-png-from-pngfre-17.png"
+                    Source="{Binding TxtIcone}"
                     VerticalOptions="StartAndExpand" />
             </Grid>
 
