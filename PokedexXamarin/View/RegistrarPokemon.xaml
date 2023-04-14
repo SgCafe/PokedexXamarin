@@ -2,14 +2,19 @@
 <ContentPage
     x:Class="PokedexXamarin.View.RegistrarPokemon"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
 
     <Grid BackgroundColor="#1d1d1d" RowDefinitions="80,*">
         <StackLayout
             Margin="10"
             Orientation="Horizontal"
             VerticalOptions="Center">
-            <Image HeightRequest="30" Source="https://i.ibb.co/kBMMn5m/image-removebg-preview-4.png" />
+            <Image HeightRequest="30" Source="https://i.ibb.co/kBMMn5m/image-removebg-preview-4.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VoltarCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
             <Image
                 HeightRequest="50"
                 HorizontalOptions="CenterAndExpand"
@@ -159,6 +164,7 @@
                     BackgroundColor="#FFE15D"
                     BorderColor="#FFF288"
                     BorderWidth="6"
+                    Command="{Binding InserirCommand}"
                     CornerRadius="15"
                     FontAttributes="Bold"
                     FontSize="25"

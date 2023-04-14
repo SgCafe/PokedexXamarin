@@ -1,6 +1,10 @@
-﻿using System;
+﻿using PokedexXamarin.Dados;
+using PokedexXamarin.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace PokedexXamarin.Viewmodel
@@ -19,7 +23,7 @@ namespace PokedexXamarin.Viewmodel
         public string TxtCorFundo
         {
             get => _txtCorFundo;
-            set => SetProperty(ref _txtCorFundo, value); 
+            set => SetProperty(ref _txtCorFundo, value);
         }
 
         private string _txtIcone;
@@ -61,6 +65,36 @@ namespace PokedexXamarin.Viewmodel
         public RegistrarPokemonViewmodel(INavigation navigation)
         {
             Navigation = navigation;
+        }
+        #endregion
+
+        #region commands 
+        public ICommand VoltarCommand => new Command(async () => await Voltar());
+        public ICommand InserirCommand => new Command(async () => await Inserir());
+        #endregion
+
+        #region methods
+        public async Task Inserir()
+        {
+            var function = new Dpokemon();
+            var parametros = new Pokemon();
+
+            parametros.CorFundo = TxtCorFundo;
+            parametros.CorTipo = TxtCorTipos;
+            parametros.Icone = TxtIcone;
+            parametros.Nome = TxtNome;
+            parametros.NumOrdem = TxtNumOrdem;
+            parametros.Tipos = TxtTipos;
+
+            await function.InsertPokemon(parametros); 
+            await Voltar();
+        }
+
+
+
+        public async Task Voltar()
+        {
+            await Navigation.PopAsync();
         }
         #endregion
     }

@@ -9,18 +9,32 @@
         <Label
             FontAttributes="Bold"
             FontSize="28"
-            HorizontalOptions="Center"
+            HorizontalOptions="CenterAndExpand"
             Text="Pokedex"
             TextColor="#FD8298"
             VerticalOptions="Center" />
+
 
         <CollectionView
             Grid.Row="1"
             Margin="10,10,10,10"
             BackgroundColor="#EAEDEC" />
+
+
+
+
+        <Button
+            Grid.Row="1"
+            Margin="0,0,20,20"
+            BackgroundColor="#F5CA55"
+            Command="{Binding RegistrarCommand}"
+            CornerRadius="50"
+            FontAttributes="Bold"
+            FontSize="50"
+            HeightRequest="100"
+            HorizontalOptions="End"
+            Text="+"
+            VerticalOptions="End"
+            WidthRequest="100" />
     </Grid>
-
-
-
-
 </ContentPage>

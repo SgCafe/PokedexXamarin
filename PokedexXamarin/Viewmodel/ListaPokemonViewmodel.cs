@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokedexXamarin.View;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,18 @@ namespace PokedexXamarin.Viewmodel
         }
         #endregion
 
-           
+        #region commands
+        public ICommand RegistrarCommand => new Command(async () => await Registrar());
+        #endregion
+
+        #region methods
+        public async Task Registrar()
+        {
+            await Navigation.PushAsync(new RegistrarPokemon());
+        }
+        
+        #endregion
+
 
     }
 }
