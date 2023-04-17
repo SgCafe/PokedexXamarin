@@ -54,9 +54,6 @@ namespace PokedexXamarin.Viewmodel
             set => SetProperty(ref _txtTipos, value);
         }
 
-
-
-
         public INavigation Navigation { get; }
 
         #endregion
