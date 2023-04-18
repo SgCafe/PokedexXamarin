@@ -16,6 +16,7 @@
 
 
         <CollectionView
+            x:Name="Lista"
             Grid.Row="1"
             Margin="10,10,10,10"
             BackgroundColor="#EAEDEC"
@@ -47,6 +48,8 @@
                                     Text="{Binding Nome}" />
                                 <Button
                                     BackgroundColor="{Binding CorTipo}"
+                                    Command="{Binding Path=BindingContext .IrDetalhesCommand, Source={x:Reference Lista}}"
+                                    CommandParameter="{Binding .}"
                                     CornerRadius="30"
                                     HeightRequest="40"
                                     HorizontalOptions="Start"
@@ -61,6 +64,9 @@
                             HeightRequest="180"
                             Source="{Binding Icone}"
                             VerticalOptions="StartAndExpand" />
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext .IrDetalhesCommand, Source={x:Reference Lista}}" CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
