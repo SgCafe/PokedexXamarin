@@ -3,6 +3,7 @@
     x:Class="PokedexXamarin.View.DetalhePokemon"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sharpnado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
     NavigationPage.HasNavigationBar="False">
     <Grid>
         <Grid.Background>
@@ -11,5 +12,91 @@
                 <GradientStop Offset="1" Color="#D71202" />
             </LinearGradientBrush>
         </Grid.Background>
+
+        <StackLayout Margin="10,0">
+            <Image
+                Margin="0,10,0,0"
+                HeightRequest="30"
+                HorizontalOptions="Start"
+                Source="https://i.ibb.co/kBMMn5m/image-removebg-preview-4.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VoltarCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label
+                FontAttributes="Bold"
+                FontSize="50"
+                Text="#001"
+                TextColor="White" />
+
+            <Image HeightRequest="300" Source="https://i.ibb.co/31fxN7b/1200px-Charizard-SSBU.png" />
+            <Label
+                FontAttributes="Bold"
+                FontSize="40"
+                HorizontalOptions="Center"
+                Text="Charizard"
+                TextColor="White" />
+
+            <Grid RowDefinitions="auto,auto">
+                <sharpnado:MaterialFrame
+                    Grid.RowSpan="2"
+                    CornerRadius="15"
+                    MaterialBlurStyle="Light"
+                    MaterialTheme="AcrylicBlur" />
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Tipo"
+                            TextColor="White" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="30"
+                            Text="Fogo"
+                            TextColor="White" />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="Cores"
+                            TextColor="White" />
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                            <BoxView
+                                BackgroundColor="Black"
+                                CornerRadius="20"
+                                HeightRequest="30"
+                                VerticalOptions="Center"
+                                WidthRequest="30" />
+                            <BoxView
+                                BackgroundColor="Purple"
+                                CornerRadius="20"
+                                HeightRequest="30"
+                                VerticalOptions="Center"
+                                WidthRequest="30" />
+                        </StackLayout>
+
+
+                    </StackLayout>
+                    <StackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            Text="NumOrder"
+                            TextColor="White" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="30"
+                            Text="#001"
+                            TextColor="White" />
+
+                    </StackLayout>
+                </StackLayout>
+                <Image
+                    Grid.Row="1"
+                    HeightRequest="60"
+                    Source="https://i.ibb.co/YN5c6yV/pokemon-png-logo.webp" />
+            </Grid>
+
+        </StackLayout>
     </Grid>
 </ContentPage>
