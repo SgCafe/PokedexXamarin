@@ -3,6 +3,7 @@ using PokedexXamarin.Model;
 using PokedexXamarin.View;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -16,8 +17,8 @@ namespace PokedexXamarin.Viewmodel
         public INavigation Navigation { get; }
 
         
-        private List<Pokemon> _ListaPokemon;
-        public List<Pokemon> ListaPokemon
+        private ObservableCollection<Pokemon> _ListaPokemon;
+        public ObservableCollection<Pokemon> ListaPokemon
         {
             get => _ListaPokemon;
             set => SetProperty(ref _ListaPokemon, value);
