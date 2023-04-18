@@ -11,7 +11,7 @@ namespace PokedexXamarin
         {
             InitializeComponent();
             
-            MainPage = new NavigationPage(new ListaPokemon());
+            MainPage = new NavigationPage(new DetalhePokemon());
         }
 
         protected override void OnStart()

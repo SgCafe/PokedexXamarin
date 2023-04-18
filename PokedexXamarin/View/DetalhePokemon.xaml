@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PokedexXamarin.View.DetalhePokemon"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0">
+                <GradientStop Offset="0.1" Color="#FD9306" />
+                <GradientStop Offset="1" Color="#D71202" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</ContentPage>
