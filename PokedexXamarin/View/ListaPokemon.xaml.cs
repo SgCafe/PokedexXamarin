@@ -13,18 +13,11 @@ namespace PokedexXamarin.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListaPokemon : ContentPage
     {
-        ListaPokemonViewmodel vm;
         public ListaPokemon()
         {
             InitializeComponent();
-            vm = new ListaPokemonViewmodel(Navigation);
-            BindingContext = vm;
-            this.Appearing += ListaPokemon_Appearing;
-        }
+            BindingContext = new ListaPokemonViewmodel(Navigation);
 
-        private async void ListaPokemon_Appearing(object sender, EventArgs e)
-        {
-            await vm.MostrarPokemon();
         }
     }
 }

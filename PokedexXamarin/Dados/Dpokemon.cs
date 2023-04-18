@@ -34,7 +34,9 @@ namespace PokedexXamarin.Dados
             //Convertendo uma Lista para um ObservableCollection
             var data = await Task.Run(() =>
 
-                Cconexao.firebase.Child("Pokemon").AsObservable<Pokemon>().AsObservableCollection()
+                Cconexao.firebase.Child("Pokemon")
+                .AsObservable<Pokemon>()
+                .AsObservableCollection()
             );
             return data;
 
