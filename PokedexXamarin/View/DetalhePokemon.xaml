@@ -43,11 +43,11 @@
                     CornerRadius="15"
                     MaterialBlurStyle="Light"
                     MaterialTheme="AcrylicBlur" />
-                <StackLayout Orientation="Horizontal">
+                <StackLayout Margin="20,10,20,0" Orientation="Horizontal">
                     <StackLayout>
                         <Label
                             FontAttributes="Bold"
-                            FontSize="16"
+                            FontSize="14"
                             Text="Tipo"
                             TextColor="White" />
                         <Label
@@ -58,18 +58,20 @@
                     </StackLayout>
                     <StackLayout HorizontalOptions="CenterAndExpand">
                         <Label
+                            FontAttributes="Bold"
+                            FontSize="14"
                             HorizontalOptions="Center"
                             Text="Cores"
                             TextColor="White" />
                         <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
                             <BoxView
-                                BackgroundColor="Black"
+                                BackgroundColor="#FD9306"
                                 CornerRadius="20"
                                 HeightRequest="30"
                                 VerticalOptions="Center"
                                 WidthRequest="30" />
                             <BoxView
-                                BackgroundColor="Purple"
+                                BackgroundColor="#D71202"
                                 CornerRadius="20"
                                 HeightRequest="30"
                                 VerticalOptions="Center"
@@ -81,6 +83,7 @@
                     <StackLayout>
                         <Label
                             FontAttributes="Bold"
+                            FontSize="14"
                             Text="NumOrder"
                             TextColor="White" />
                         <Label
@@ -93,9 +96,49 @@
                 </StackLayout>
                 <Image
                     Grid.Row="1"
+                    Margin="0,0,0,10"
                     HeightRequest="60"
                     Source="https://i.ibb.co/YN5c6yV/pokemon-png-logo.webp" />
             </Grid>
+
+            <Frame
+                Margin="0,15,0,0"
+                Padding="0"
+                CornerRadius="30"
+                HasShadow="False"
+                HeightRequest="55">
+                <Grid ColumnDefinitions="*,*">
+                    <Button
+                        BackgroundColor="#5adf99"
+                        CornerRadius="30"
+                        FontAttributes="Bold"
+                        Text="Seguir"
+                        TextColor="White" />
+                    <StackLayout
+                        Grid.Column="1"
+                        Orientation="Horizontal"
+                        VerticalOptions="Center">
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <Image HeightRequest="40" Source="https://i.ibb.co/z67TBnR/tubo-de-sangre.png" />
+                            <Label
+                                Margin="-10,0,0,0"
+                                FontAttributes="Bold"
+                                Text="Youtube"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image HeightRequest="40" Source="https://i.ibb.co/31fxN7b/1200px-Charizard-SSBU.png" />
+                            <Label
+                                Margin="0,0,0,0"
+                                FontAttributes="Bold"
+                                Text="Fb"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Frame>
 
         </StackLayout>
     </Grid>
