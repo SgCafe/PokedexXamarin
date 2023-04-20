@@ -8,8 +8,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="1,0">
-                <GradientStop Offset="0.1" Color="#FD9306" />
-                <GradientStop Offset="1" Color="#D71202" />
+                <GradientStop Offset="0.1" Color="{Binding ParametrosRecebe.CorFundo}" />
+                <GradientStop Offset="1" Color="{Binding ParametrosRecebe.CorTipo}" />
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -26,15 +26,15 @@
             <Label
                 FontAttributes="Bold"
                 FontSize="50"
-                Text="#001"
+                Text="{Binding ParametrosRecebe.NumOrdem}"
                 TextColor="White" />
 
-            <Image HeightRequest="300" Source="https://i.ibb.co/31fxN7b/1200px-Charizard-SSBU.png" />
+            <Image HeightRequest="300" Source="{Binding ParametrosRecebe.Icone}" />
             <Label
                 FontAttributes="Bold"
                 FontSize="40"
                 HorizontalOptions="Center"
-                Text="Charizard"
+                Text="{Binding ParametrosRecebe.Nome}"
                 TextColor="White" />
 
             <Grid RowDefinitions="auto,auto">
@@ -53,7 +53,7 @@
                         <Label
                             FontAttributes="Bold"
                             FontSize="30"
-                            Text="Fogo"
+                            Text="{Binding ParametrosRecebe.Tipos}"
                             TextColor="White" />
                     </StackLayout>
                     <StackLayout HorizontalOptions="CenterAndExpand">
@@ -65,13 +65,13 @@
                             TextColor="White" />
                         <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
                             <BoxView
-                                BackgroundColor="#FD9306"
+                                BackgroundColor="{Binding ParametrosRecebe.CorFundo}"
                                 CornerRadius="20"
                                 HeightRequest="30"
                                 VerticalOptions="Center"
                                 WidthRequest="30" />
                             <BoxView
-                                BackgroundColor="#D71202"
+                                BackgroundColor="{Binding ParametrosRecebe.CorTipo}"
                                 CornerRadius="20"
                                 HeightRequest="30"
                                 VerticalOptions="Center"
@@ -89,7 +89,7 @@
                         <Label
                             FontAttributes="Bold"
                             FontSize="30"
-                            Text="#001"
+                            Text="{Binding ParametrosRecebe.NumOrdem}"
                             TextColor="White" />
 
                     </StackLayout>
@@ -128,7 +128,7 @@
                                 VerticalOptions="Center" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Image HeightRequest="40" Source="https://i.ibb.co/31fxN7b/1200px-Charizard-SSBU.png" />
+                            <Image HeightRequest="40" Source="{Binding ParametrosRecebe.Icone}" />
                             <Label
                                 Margin="0,0,0,0"
                                 FontAttributes="Bold"

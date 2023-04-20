@@ -13,8 +13,6 @@ namespace PokedexXamarin.Dados
 {
     public class Dpokemon
     {
-
-
         public async Task InsertPokemon(Pokemon parametros)
         {
             await Cconexao.firebase.Child("Pokemon").PostAsync(new Pokemon()

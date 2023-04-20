@@ -37,13 +37,13 @@ namespace PokedexXamarin.Viewmodel
 
         #region commands
         public ICommand RegistrarCommand => new Command(async () => await Registrar());
-        public ICommand IrDetalhesCommand => new Command(async() => await IrDetalhes());
+        public ICommand IrDetalhesCommand => new Command<Pokemon>(async(p) => await IrDetalhes(p));
         #endregion
 
         #region methods
-        public async Task IrDetalhes()
+        public async Task IrDetalhes(Pokemon parametros)
         {
-            await Navigation.PushAsync(new DetalhePokemon());
+            await Navigation.PushAsync(new DetalhePokemon(parametros));
         }
 
         public async Task MostrarPokemon()

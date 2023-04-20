@@ -1,4 +1,5 @@
-﻿using PokedexXamarin.Viewmodel;
+﻿using PokedexXamarin.Model;
+using PokedexXamarin.Viewmodel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,10 @@ namespace PokedexXamarin.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetalhePokemon : ContentPage
     {
-        public DetalhePokemon()
+        public DetalhePokemon(Pokemon parametros)
         {
             InitializeComponent();
-            BindingContext = new DetalhePokemonViewmodel(Navigation);
+            BindingContext = new DetalhePokemonViewmodel(Navigation, parametros);
         }
     }
 }
